@@ -7,8 +7,8 @@ const path = require("path");
 const cors = require("cors");
 const connectDB = require("./config/db");   // Connecting db connection code
 const {connectCloudinary}=require("./config/cloudinary.js")
-const { adminRouter } = require("./routes/AdminRoute");
-const { shopRouter } = require("./routes/ShopRoute");
+const { adminRouter } = require("./routes/adminRoute");
+const { shopRouter } = require("./routes/shopRoute");
 require("dotenv").config();
 const dns=require("dns");
 const { userRouter } = require("./routes/userRoute.js");
