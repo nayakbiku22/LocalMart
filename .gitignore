@@ -1,0 +1,10 @@
+client/node_modules/
+admin/node_modules/
+server/node_modules/
+
+server/.env
+
+
+# Ignore build artifacts
+dist/
+build/

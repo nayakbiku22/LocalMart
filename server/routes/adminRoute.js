@@ -1,0 +1,15 @@
+const express=require("express")
+const { loginAdmin, addShop, allShops, getBooks, getClothes, getAllProducts, getOrders, cancelOrder } = require("../controllers/adminController")
+const { authAdmin } = require("../middleware/authAdmin")
+const {upload}=require("../middleware/multer.js")
+const adminRouter=express.Router()
+
+adminRouter.post("/login",loginAdmin)
+adminRouter.get("/all-shops",authAdmin,allShops)
+adminRouter.get("/all-products",authAdmin,getAllProducts)
+adminRouter.get("/books",authAdmin,getBooks)
+adminRouter.get("/clothes",authAdmin,getClothes)
+adminRouter.get("/orders",authAdmin,getOrders)
+adminRouter.post('/cancel-order',authAdmin,cancelOrder)
+adminRouter.post("/add-shop",authAdmin,upload.single('image'),addShop)
+module.exports={adminRouter}
