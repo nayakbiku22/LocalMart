@@ -213,7 +213,7 @@ const [outOfStock,setOutOfStock]=useState(false)
             <img src={item.image} alt="" className='h-[433px] w-[83%] border border-gray-300 ' />
           </div>
           <div className='w-[45%] flex flex-col ml-3 mt-[36px] gap-3'>
-            <p className='ml-1 font-serif text-lg text-blue-600 underline cursor-pointer'>{item.shopData.name}</p>
+            <p onClick={()=>navigate(`/shops/books/${item.shopData._id}`)} className='ml-1 font-serif text-lg text-blue-600 underline cursor-pointer'>{item.shopData.name}</p>
             <p className='text-xl'>{item.name}</p>
             <p className='text-xl font-medium'>Rs. {item.price}</p>
             <p className='text-gray-600'>{item.title}</p>
